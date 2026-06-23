@@ -150,12 +150,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       // Prepare data
-      const formData = {
-        name: fields.name.input.value.trim(),
-        email: fields.email.input.value.trim(),
-        phone: fields.phone.input.value.trim(),
-        message: fields.message.input.value.trim()
-      };
+      const nameVal = fields.name.input.value.trim();
+      const emailVal = fields.email.input.value.trim();
+      const phoneVal = fields.phone.input.value.trim();
+      const messageVal = fields.message.input.value.trim();
 
       // Show loading status
       submitBtn.disabled = true;
@@ -164,15 +162,57 @@ document.addEventListener('DOMContentLoaded', () => {
       formStatus.innerHTML = '<div class="spinner"></div><span>Enviando consulta...</span>';
 
       try {
-        const response = await fetch('/api/contact', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(formData)
-        });
+        const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+        let response;
+        let data = {};
 
-        const data = await response.json();
+        if (isLocal) {
+          // Dev local Express server: JSON POST to /api/contact
+          response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              name: nameVal,
+              email: emailVal,
+              phone: phoneVal,
+              message: messageVal
+            })
+          });
+          data = await response.json();
+        } else {
+          // Production on Netlify: x-www-form-urlencoded POST to /
+          const botFieldVal = contactForm.querySelector('input[name="bot-field"]').value;
+          const bodyData = new URLSearchParams({
+            'form-name': 'contacto',
+            'bot-field': botFieldVal,
+            'name': nameVal,
+            'email': emailVal,
+            'phone': phoneVal,
+            'message': messageVal
+          });
+
+          response = await fetch('/', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: bodyData.toString()
+          });
+          
+          if (response.ok) {
+            data = {
+              success: true,
+              message: 'Tu mensaje ha sido enviado con éxito. Nos pondremos en contacto a la brevedad.'
+            };
+          } else {
+            data = {
+              success: false,
+              message: 'Ocurrió un error al enviar el formulario a través de Netlify.'
+            };
+          }
+        }
 
         // Clear loading
         formStatus.classList.remove('loading');

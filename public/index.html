@@ -260,7 +260,11 @@
           
           <!-- Form Column -->
           <div class="contact-form-panel">
-            <form id="contactForm" novalidate>
+            <form id="contactForm" name="contacto" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+              <input type="hidden" name="form-name" value="contacto">
+              <div style="display:none;">
+                <label>No completar: <input name="bot-field"></label>
+              </div>
               <div class="form-row">
                 <div class="form-group">
                   <label for="name">Nombre Completo *</label>

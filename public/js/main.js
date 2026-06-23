@@ -183,22 +183,12 @@ document.addEventListener('DOMContentLoaded', () => {
           data = await response.json();
         } else {
           // Production on Netlify: x-www-form-urlencoded POST to /
-          const botFieldVal = contactForm.querySelector('input[name="bot-field"]').value;
-          const bodyData = new URLSearchParams({
-            'form-name': 'contacto',
-            'bot-field': botFieldVal,
-            'name': nameVal,
-            'email': emailVal,
-            'phone': phoneVal,
-            'message': messageVal
-          });
-
           response = await fetch('/', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/x-www-form-urlencoded'
             },
-            body: bodyData.toString()
+            body: new URLSearchParams(new FormData(contactForm)).toString()
           });
           
           if (response.ok) {

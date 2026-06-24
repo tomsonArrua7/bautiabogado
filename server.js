@@ -52,7 +52,7 @@ app.post('/api/contact', async (req, res) => {
     subject: `Nueva Consulta de ${name} - Contacto Web`,
     html: `
       <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-        <div style="background-color: #0f172a; padding: 20px; text-align: center;">
+        <div style="background-color: #0f1f39; padding: 20px; text-align: center;">
           <h2 style="color: #ffffff; margin: 0; font-size: 20px;">Nueva Consulta - Estudio Jurídico</h2>
         </div>
         <div style="padding: 24px; background-color: #ffffff;">
@@ -74,7 +74,7 @@ app.post('/api/contact', async (req, res) => {
           
           <div style="margin-top: 20px;">
             <p style="font-weight: bold; margin-bottom: 8px;">Mensaje:</p>
-            <div style="background-color: #f8fafc; padding: 15px; border-left: 4px solid #dc2626; border-radius: 4px; font-style: italic; white-space: pre-wrap;">
+            <div style="background-color: #f8fafc; padding: 15px; border-left: 4px solid #6a824e; border-radius: 4px; font-style: italic; white-space: pre-wrap;">
               ${message}
             </div>
           </div>

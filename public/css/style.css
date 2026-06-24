@@ -607,52 +607,21 @@ ul {
   color: var(--primary-navy-muted);
 }
 
-/* --- TRANSITION BANNER --- */
-.transition-banner {
-  position: relative;
-  padding: 90px 0;
-  background-image: linear-gradient(rgba(15, 31, 57, 0.88), rgba(15, 31, 57, 0.88)), url('../images/barra_clean.png');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  color: var(--bg-white);
-  text-align: center;
-  border-top: 2px solid var(--accent-gold-dark);
-  border-bottom: 2px solid var(--accent-gold-dark);
-  z-index: 5;
+/* --- DECORATIVE DIVIDER BAR --- */
+.decorative-bar-container {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  display: block;
+  border-top: 1px solid var(--accent-gold-dark);
+  border-bottom: 1px solid var(--accent-gold-dark);
+  background-color: var(--primary-navy);
 }
 
-@media (max-width: 768px) {
-  .transition-banner {
-    background-attachment: scroll; /* Disable fixed attachment on mobile for better compatibility */
-    padding: 60px 0;
-  }
-}
-
-.transition-banner-content {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-.transition-banner-quote {
-  font-family: var(--font-heading);
-  font-size: 1.55rem;
-  font-weight: 500;
-  line-height: 1.7;
-  font-style: italic;
-  color: var(--accent-gold);
-  margin-bottom: 20px;
-  letter-spacing: 0.01em;
-}
-
-.transition-banner-author {
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: var(--text-light);
-  font-weight: 600;
+.decorative-bar-img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* --- AREAS OF PRACTICE --- */

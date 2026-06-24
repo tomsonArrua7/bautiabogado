@@ -46,7 +46,7 @@ app.post('/api/contact', async (req, res) => {
 
   // 2. Email Sending logic
   const mailOptions = {
-    from: `"Web de Contacto - BautiAbogado" <${process.env.SMTP_USER || 'no-reply@bautiabogado.com'}>`,
+    from: `"Web de Contacto - Galatro & Galatro Abogados" <${process.env.SMTP_USER || 'no-reply@galatroabogados.com'}>`,
     to: process.env.CONTACT_RECEIVER || 'galatrobautista@gmail.com',
     replyTo: email,
     subject: `Nueva Consulta de ${name} - Contacto Web`,

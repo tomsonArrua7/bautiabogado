@@ -1,7 +1,7 @@
 {
-  "name": "bauti-abogado",
+  "name": "galatro-galatro-abogados",
   "version": "1.0.0",
-  "description": "Sitio web profesional para el abogado Bautista Galatro",
+  "description": "Sitio web profesional para el Estudio Jurídico Galatro & Galatro Abogados",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

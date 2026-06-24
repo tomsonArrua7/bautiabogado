@@ -69,6 +69,14 @@ body {
   overflow-x: hidden;
 }
 
+/* Apply linen paper texture to all content sections */
+.hero-section, .profile-section, .areas-section, .contact-section {
+  background-image: 
+    linear-gradient(90deg, rgba(15, 31, 57, 0.012) 50%, transparent 50%),
+    linear-gradient(rgba(15, 31, 57, 0.012) 50%, transparent 50%);
+  background-size: 4px 4px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   color: var(--primary-navy);
@@ -673,15 +681,29 @@ ul {
 /* --- DECORATIVE DIVIDER BAR --- */
 .decorative-bar-container {
   width: 100%;
+  height: 160px; /* Much thinner, elegant height */
+  background-color: var(--primary-navy);
+  border-top: 2px solid var(--accent-gold-dark);
+  border-bottom: 2px solid var(--accent-gold-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
-  line-height: 0;
-  display: block;
+  position: relative;
 }
 
 .decorative-bar-img {
-  width: 100%;
-  height: auto;
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
   display: block;
+}
+
+@media (max-width: 768px) {
+  .decorative-bar-container {
+    height: 100px; /* Thinner on mobile screens */
+  }
 }
 
 /* --- AREAS OF PRACTICE --- */

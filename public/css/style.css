@@ -553,6 +553,50 @@ ul {
   line-height: 1.7;
 }
 
+/* --- TEAM MEMBERS --- */
+.team-members {
+  margin: 16px 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.team-member {
+  border-left: 3px solid var(--accent-color-light);
+  padding-left: 20px;
+  transition: var(--transition-normal);
+}
+
+.team-member:hover {
+  border-left-color: var(--accent-color);
+}
+
+.member-name {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary-navy);
+  line-height: 1.2;
+}
+
+.member-role {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.member-desc {
+  font-size: 1rem;
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
 .profile-credentials {
   margin: 24px 0;
   display: flex;

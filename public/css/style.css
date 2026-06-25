@@ -624,50 +624,30 @@ ul {
   line-height: 1.6;
 }
 
-.profile-credentials {
-  margin: 24px 0;
+.member-meta {
+  margin-top: 16px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
+  border-top: 1px dashed var(--border-color);
+  padding-top: 14px;
 }
 
-.credential-item {
+.meta-item {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--text-main);
+  line-height: 1.4;
 }
 
-.credential-icon {
-  background-color: var(--primary-navy);
-  color: var(--bg-white);
-  width: 38px;
-  height: 38px;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.meta-item i {
+  width: 16px;
+  height: 16px;
+  color: var(--accent-color);
   flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.credential-icon i {
-  width: 18px;
-  height: 18px;
-}
-
-.credential-label {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--text-muted);
-  font-weight: 600;
-}
-
-.credential-val {
-  font-family: var(--font-heading);
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--primary-navy);
+  margin-top: 3px;
 }
 
 .profile-quote {

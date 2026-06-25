@@ -221,123 +221,60 @@
       <div class="container">
         <div class="section-header text-center">
           <span class="section-tag">Contacto</span>
-          <h2 class="section-title">Iniciar una Consulta</h2>
+          <h2 class="section-title">Canales de Atención Directa</h2>
           <div class="title-divider"></div>
-          <p class="section-subtitle">Dejanos tu mensaje o comunicate de manera directa. Te responderemos a la brevedad para evaluar tu caso.</p>
+          <p class="section-subtitle">Comunicate directamente con nosotros. Elegí la opción que prefieras para iniciar tu consulta.</p>
         </div>
         
-        <div class="contact-grid">
-          <!-- Info Column -->
-          <div class="contact-info-panel">
-            <h3 class="contact-info-title">Información de Contacto</h3>
-            <p class="contact-info-desc">Comunicate a través de nuestros canales oficiales o agendá una reunión en nuestro estudio.</p>
+        <div class="contact-card-container">
+          <div class="contact-card-main">
             
-            <div class="contact-methods">
-              <a href="mailto:galatrobautista@gmail.com" class="contact-method-item">
-                <div class="method-icon">
-                  <i data-lucide="mail"></i>
-                </div>
-                <div>
-                  <p class="method-label">Enviar Email</p>
-                  <p class="method-value">galatrobautista@gmail.com</p>
-                </div>
-              </a>
-
-              <a href="tel:2920351641" class="contact-method-item">
-                <div class="method-icon">
-                  <i data-lucide="phone-call"></i>
-                </div>
-                <div>
-                  <p class="method-label">Llamar por Teléfono</p>
-                  <p class="method-value">2920351641</p>
-                </div>
-              </a>
-
-              <a href="https://wa.me/5492920351641" target="_blank" rel="noopener noreferrer" class="contact-method-item">
-                <div class="method-icon whatsapp-icon-bg">
+            <div class="contact-card-methods">
+              <a href="https://wa.me/5492920351641" target="_blank" rel="noopener noreferrer" class="contact-card-btn btn-whatsapp">
+                <div class="btn-icon-wrapper">
                   <i data-lucide="message-square"></i>
                 </div>
-                <div>
-                  <p class="method-label">WhatsApp Directo</p>
-                  <p class="method-value">2920351641</p>
+                <div class="btn-text-wrapper">
+                  <span class="btn-label">WhatsApp Directo</span>
+                  <span class="btn-sub">Escribinos para una respuesta inmediata</span>
                 </div>
+                <i data-lucide="arrow-right" class="btn-arrow"></i>
               </a>
-              
-              <div class="contact-method-item">
-                <div class="method-icon">
-                  <i data-lucide="map-pin"></i>
+
+              <a href="mailto:galatrobautista@gmail.com" class="contact-card-btn btn-email">
+                <div class="btn-icon-wrapper">
+                  <i data-lucide="mail"></i>
                 </div>
-                <div>
-                  <p class="method-label">Ubicación</p>
-                  <p class="method-value">La Plata, Provincia de Buenos Aires</p>
+                <div class="btn-text-wrapper">
+                  <span class="btn-label">Correo Electrónico</span>
+                  <span class="btn-sub">galatrobautista@gmail.com</span>
                 </div>
+                <i data-lucide="arrow-right" class="btn-arrow"></i>
+              </a>
+
+              <a href="tel:2920351641" class="contact-card-btn btn-phone">
+                <div class="btn-icon-wrapper">
+                  <i data-lucide="phone"></i>
+                </div>
+                <div class="btn-text-wrapper">
+                  <span class="btn-label">Llamada Telefónica</span>
+                  <span class="btn-sub">2920351641</span>
+                </div>
+                <i data-lucide="arrow-right" class="btn-arrow"></i>
+              </a>
+            </div>
+
+            <div class="contact-card-footer">
+              <div class="footer-item">
+                <i data-lucide="map-pin"></i>
+                <span>La Plata, Provincia de Buenos Aires</span>
+              </div>
+              <div class="footer-item">
+                <i data-lucide="info"></i>
+                <span>Atención presencial únicamente con turno previo programado.</span>
               </div>
             </div>
-            
-            <div class="contact-notice">
-              <i data-lucide="info" class="notice-icon"></i>
-              <p>Atención presencial únicamente con turno previo programado.</p>
-            </div>
-          </div>
-          
-          <!-- Form Column -->
-          <div class="contact-form-panel">
-            <form id="contactForm" name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
-              <input type="hidden" name="form-name" value="contacto">
-              <div style="display:none;">
-                <label>No completar: <input name="bot-field"></label>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="name">Nombre Completo *</label>
-                  <div class="input-wrapper">
-                    <i data-lucide="user" class="input-icon"></i>
-                    <input type="text" id="name" name="name" required placeholder="Ej: Juan Pérez">
-                  </div>
-                  <span class="error-message" id="nameError">El nombre es requerido.</span>
-                </div>
-              </div>
-              
-              <div class="form-row split">
-                <div class="form-group">
-                  <label for="email">Email de Contacto *</label>
-                  <div class="input-wrapper">
-                    <i data-lucide="mail" class="input-icon"></i>
-                    <input type="email" id="email" name="email" required placeholder="Ej: juan@example.com">
-                  </div>
-                  <span class="error-message" id="emailError">Ingresa un correo electrónico válido.</span>
-                </div>
-                
-                <div class="form-group">
-                  <label for="phone">Teléfono / WhatsApp *</label>
-                  <div class="input-wrapper">
-                    <i data-lucide="smartphone" class="input-icon"></i>
-                    <input type="tel" id="phone" name="phone" required placeholder="Ej: 2211234567">
-                  </div>
-                  <span class="error-message" id="phoneError">Ingresa un teléfono válido.</span>
-                </div>
-              </div>
-              
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="message">Mensaje / Breve Consulta *</label>
-                  <div class="input-wrapper">
-                    <textarea id="message" name="message" required rows="5" placeholder="Describe brevemente tu situación legal..."></textarea>
-                  </div>
-                  <span class="error-message" id="messageError">Por favor escribe tu consulta.</span>
-                </div>
-              </div>
-              
-              <!-- Form Notification -->
-              <div class="form-status" id="formStatus">
-                <!-- Will be populated dynamically by JS -->
-              </div>
-              
-              <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
-                <span>Enviar Consulta</span>
-                <i data-lucide="send" class="btn-icon-right"></i>
-              </button>
-            </form>
+
           </div>
         </div>
       </div>
